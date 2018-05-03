@@ -1,0 +1,17 @@
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main {
+  flex: 1 1 auto;
+}

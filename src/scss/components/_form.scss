@@ -1,0 +1,111 @@
+.form {
+  &__inner {
+    @include make-row();
+    margin-left: -$grid-gutter-small;
+    margin-right: -$grid-gutter-small;
+  }
+  &__item {
+    margin-bottom: 30px;
+    @include make-col-ready();
+    padding-left: $grid-gutter-small;
+    padding-right: $grid-gutter-small;
+    &:first-child {
+      @include make-col(12);
+    }
+    @include make-col(6);
+    &:nth-child(4n), &:nth-child(5n) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      &:nth-child(n+ 1) {
+        @include make-col(4);
+      }
+
+      &:nth-child(4) {
+        @include make-col(12);
+      }
+      
+    }
+
+  }
+}
+
+.field {
+  position: relative;
+  &::after{
+    content: '';
+    height: 2px;
+    right: 10px;
+    left: 10px;
+    bottom: 0;
+    position:absolute;
+    opacity: 0;
+    transition: .3s linear;
+  }
+
+  &__input, .select {
+    cursor: pointer;
+    width: 100%;
+    transition: .3s ease;
+    border: 1px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+    height: 40px;
+    padding-left: 10px;
+    background-color: transparent;
+    &:hover {
+      border-bottom: 2px solid #c4092f;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid  #000000;
+    }
+    &:focus + .field__placeholder {
+      transform: translateY(-40px);
+    }
+  }
+  &__placeholder {
+    position: absolute;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    left: 20px;
+    top: 50%;
+    transition: .3s ease;
+    transform: translateY(-50%);
+  }
+
+}
+
+.radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  &__input:checked ~ &__checkmark {
+    box-shadow: 0 0 0 4px #c4092f;
+  }
+
+  .select {
+    &__option {
+      height: 30px;
+    }
+  }
+}
+

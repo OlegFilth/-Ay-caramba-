@@ -1,0 +1,12 @@
+.header {
+  background-color:  #282d30;
+  padding-top: 10px;
+  &__logo {
+    margin: 0 auto;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      bottom: -7px;
+    }
+  }
+  
+}

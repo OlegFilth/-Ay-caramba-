@@ -1,0 +1,136 @@
+.list {
+  list-style-type: none;
+  &__item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    padding:17px 15px;
+    color: #282d30;
+    background-color: #f5f6f6;
+    border-bottom: 1px solid rgba(#989898, .2);
+
+    
+
+    &--title {
+      border-radius: 4px;
+      background-color: #c4092f;
+      color: white;
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: flex;
+      }
+
+      & > p {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1 1 130px;
+    order: 1;
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 30px;
+    @include media-breakpoint-up(md) {
+     order: 0;
+     flex: 0 1 30%;
+     font-size: 15px;
+    }
+    @include media-breakpoint-up(lg) {
+      order: 0;
+      flex: 0 1 40%;
+      font-size: 15px;
+     }
+  }
+
+  &__year {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    order: 5;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 21px;
+    @include media-breakpoint-up(md) {
+      order: 0;
+      font-size: 15px;
+     }
+  }
+
+  &__color {
+    flex: 0 1 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    order: 2;
+    margin-right: auto;
+    @include media-breakpoint-up(md) {
+      order: 0;
+      margin-right: 21px;
+     }
+  }
+
+  &__price {
+    flex: 0 1 90px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    order: 3;
+    font-size: 14px;
+    font-weight: 300;
+    @include media-breakpoint-up(md) {
+      order: 0;
+      font-size: 16px;
+      flex: 0 1 140px;
+     }
+   
+  }
+
+  &__description {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    order: 4;
+    flex: 0 1 100%;
+    color: #8b9497;
+    font-size: 13px;
+    font-weight: 300;
+    @include media-breakpoint-up(md) {
+      order: 1;
+    }
+    @include media-breakpoint-up(lg) {
+      flex: 0 1 40%;
+      position: relative;
+      top: -13px;
+      height: 0;
+      padding: 0;
+     }
+  }
+
+  &__status {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    order: 6;
+    font-size: 14px;
+    font-weight: 300;
+    @include media-breakpoint-up(md) {
+      order: 0;
+      flex:0 1 114px;
+     }
+  }
+
+  &__delete {
+    order: 7;
+    flex:0 1 75px;
+    margin-top: 6px;
+    margin-left: auto;
+    @include media-breakpoint-up(md) {
+
+      order: 0;
+     }
+  }
+  
+}

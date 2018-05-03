@@ -1,0 +1,22 @@
+.btn {
+  cursor: pointer;
+  width: 100%;
+  color: white;
+  border: none;
+
+  &--primary {
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #c4092f;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &--secondary {
+    background-color: #282d30;
+    padding: 7px 14px;
+    border-radius: 20px;
+    line-height: 100%;
+  }
+}

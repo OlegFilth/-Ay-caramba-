@@ -1,0 +1,30 @@
+.circle {
+  height: 21px;
+  width: 21px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  &--white {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  &--black {
+    background-color: #000000;
+    border: 1px solid #000000;
+  }
+  &--gray {
+    background-color: #cbcbcc;
+    border: 1px solid #cbcbcc;
+  }
+
+  &--red {
+    background-color: #d74345;
+    border: 1px solid #d74345;
+  }
+
+  &--green {
+    background-color: #88c504;
+    border: 1px solid #88c504;
+  }
+}

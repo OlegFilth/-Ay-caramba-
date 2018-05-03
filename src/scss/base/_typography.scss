@@ -1,0 +1,25 @@
+.title-primary {
+  color: #282d30;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.title-secondary {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-heihgt: 100%;
+  &::before {
+    content:'';
+    display: inline-block;
+    width: 3px;
+    margin-right: 7px;
+    height: 14px;
+    background-color: #8b9497;
+  }
+}
+
+.total {
+  font-size: 20px;
+}

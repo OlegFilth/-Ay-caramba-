@@ -1,0 +1,16 @@
+.footer {
+  background-color: #282d30;
+  padding-top: 43px;
+  padding-bottom: 36px;
+
+  &__paragraph {
+    max-width: 173px;
+    color: #ffffff;
+    font-size: 11px;
+    margin: 0 auto;
+  }
+
+  &__copyright {
+    text-transform: uppercase;
+  }
+}
