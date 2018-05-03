@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+  <link href="css/app.bundle.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <picture class="header__logo">
+          <source media="(min-width: 767px)" srcset="images/logo-wide.png">
+          <source srcset="images/logo.png">
+          <img class="header__logo" src="images/logo.png" alt="Logo Duck">
+      </picture>
+     
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="section-form">
+          <h1 class="title-primary u-text-center">¡Ay caramba!</h1>
+          <form  action="#" class="section-form__form form js-add-car">
+            <div class="form__inner">
+              <div class="field form__item">
+                <input id="name" type="text" class="field__input" required>
+                <label for="name" class="field__placeholder" >Название</label>
+              </div>
+              <div class="field form__item">
+                <input id="year" type="text" class="field__input" required>
+                <label for="year" class="field__placeholder" >Год</label>
+              </div>
+              <div class="field form__item">
+                <input id="price" type="text" class="field__input" required>
+                <label for="price" class="field__placeholder">Цена</label>
+              </div>
+              <div class="field form__item">
+                <input id="description" type="text" class="field__input" required>
+                <label for="description" class="field__placeholder">Описание</label>
+              </div>
+              <div class="form__item">
+                <label for="radio-white" class="radio">
+                <input id="radio-white" class="radio__input" type="radio" name="color" value="white" required>
+                <span class="radio__checkmark circle circle--white"></span>
+                </label>
+                <label for="radio-black" class="radio">
+                <input id="radio-black" class="radio__input" type="radio" name="color" value="black" required>
+                <span class="radio__checkmark circle circle--black"></span>
+                </label>
+                <label for="radio-gray" class="radio" >
+                <input id="radio-gray" class="radio__input" type="radio" name="color" value="gray" required>
+                <span class="radio__checkmark circle circle--gray"></span>
+                </label>
+                <label for="radio-red" class="radio">
+                <input id="radio-red" class="radio__input" type="radio" name="color" value="red" required>
+                <span class="radio__checkmark circle circle--red"></span>
+                </label>
+                <label for="radio-green" class="radio">
+                <input id="radio-green" class="radio__input" type="radio" name="color" value="green" required>
+                <span class="radio__checkmark circle circle--green"></span>
+                </label>
+              </div>
+              <div class="field form__item">
+                <select id="status" class="select" name="status" required>
+                  <option selected disabled="disabled" hidden value="">Cтатус</option>
+                  <option class="select__option" value="in_stock" >В наличии</option>
+                  <option class="select__option" value="pednding" >Ожидается</option>
+                  <option class="select__option" value="out_of_stock">Нет в наличии</option>
+                </select>
+              </div>
+              <div class="form__item"><button class="btn btn--primary">Отправить</button></div>
+            </div>
+          </form>
+        </div>
+        <div class="section-list">
+          <div class="section-list__inner">
+            <div class="section-list__title title-secondary">Автомобили в наличии</div>
+            <div class="section-list__total total">
+              Итого:
+              <span class="total__price"></span>
+            </div>
+          </div>
+          <ul class="list section-list__list">
+            <li class="list__item list__item--title">
+              <p class="list__name">Название</p>
+              <p class="list__year">Год</p>
+              <p class="list__color">Цвет</p>
+              <p class="list__status">Статус</p>
+              <p class="list__price">Цена</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__paragraph u-text-center">
+        <span class="footer__copyrigth">© 2015 CAPTAIN QUACK</span>
+        Десница тысячелетия и моллюск!
+      </p>
+    </footer>
+    <template>
+      <li class="list__item">
+        <p class="list__name">Название</p>
+        <p class="list__year">Год</p>
+        <p class="list__color"><span></span></p>
+        <p class="list__status">Статус</p>
+        <p class="list__description">Статус</p>
+        <p class="list__price price">
+          <span class="price--current"></span><br>
+          <span class="price--increase"></span><br>
+          <span style="font-size: 10px; color:#ff4e61">Надбавка 13%</span>
+        </p>
+        <button class="btn btn--secondary list__delete">Удалить</button>
+      </li>
+    </template>
+  <script type="text/javascript" src="js/app.bundle.js"></script></body>
+</html>
